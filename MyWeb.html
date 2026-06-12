@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>rsfsytso</title>
+  <link rel="stylesheet" href="MyWeb.css">
+</head>
+
+<body>
+
+  <!-- ============================================
+     DESKTOP
+     ============================================ -->
+  <div id="desktop">
+
+    <!-- ── DESKTOP ICONS ── -->
+    <div class="icon-grid">
+
+      <div class="desktop-icon" ondblclick="openWin('about')" onclick="selectIcon(this)">
+        <div class="icon-img">🧑</div>
+        <span>About Me</span>
+      </div>
+
+      <div class="desktop-icon" ondblclick="openWin('projects')" onclick="selectIcon(this)">
+        <div class="icon-img">📁</div>
+        <span>My Projects</span>
+      </div>
+
+      <div class="desktop-icon" ondblclick="openWin('videos')" onclick="selectIcon(this)">
+        <div class="icon-img">▶️</div>
+        <span>My Videos</span>
+      </div>
+
+      <div class="desktop-icon" ondblclick="openWin('resume')" onclick="selectIcon(this)">
+        <div class="icon-img">📄</div>
+        <span>Resume.txt</span>
+      </div>
+
+      <div class="desktop-icon" ondblclick="openLink()" onclick="selectIcon(this)">
+        <div class="icon-img">🐙</div>
+        <span>GitHub</span>
+      </div>
+
+      <div class="desktop-icon" ondblclick="openWin('contact')" onclick="selectIcon(this)">
+        <div class="icon-img">✉️</div>
+        <span>Contact Me</span>
+      </div>
+
+      <div class="desktop-icon" onclick="selectIcon(this)">
+        <div class="icon-img">🗑️</div>
+        <span>Recycle Bin</span>
+      </div>
+
+      <div class="desktop-icon" ondblclick="openWin('picture')" onclick="selectIcon(this)">
+        <div class="icon-img">🖼️</div>
+        <span>My Picture</span>
+      </div>
+
+
+
+    </div>
+
+
+    <!-- ============================================
+       ABOUT ME WINDOW
+       ============================================ -->
+    <div class="win" id="win-about" style="left:120px; top:60px; width:540px; height:420px; display:none;">
+      <div class="win-titlebar" onmousedown="dragStart(event,'win-about')">
+        <span class="win-icon">🧑</span>
+        <span class="win-title">About Me</span>
+        <div class="win-controls">
+          <button class="wbtn" onclick="minimizeWin('about')">─</button>
+          <button class="wbtn" onclick="maximizeWin('win-about')">🗗</button>
+          <button class="wbtn close-btn" onclick="closeWin('about')">✕</button>
+        </div>
+      </div>
+      <div class="win-body">
+        <div class="about-content">
+
+          <div class="avatar">AR</div>
+          <div class="profile-info">
+
+            <h1>Abdul Rafay</h1>
+            <p>SE Student · Final Year</p>
+          </div>
+        </div>
+
+        <div class="about-section">
+          <h3>About</h3>
+
+          <p>Final year CS student passionate about building real software. Currently learning Python, Flask, and AWS to
+            transition into a software engineering internship or role. I learn by doing — not just watching tutorials.
+          </p>
+        </div>
+
+        <div class="about-section">
+          <h3>Currently Learning</h3>
+          <!-- CHANGE: add or remove skill chips as you learn more -->
+          <div class="skills-chips">
+            <span class="chip">Python</span>
+            <span class="chip">Flask</span>
+            <span class="chip">HTML & CSS</span>
+            <span class="chip">AWS EC2</span>
+            <span class="chip">AWS S3</span>
+            <span class="chip">Git & GitHub</span>
+            <span class="chip">REST APIs</span>
+            <span class="chip">Linux</span>
+          </div>
+        </div>
+
+        <div class="about-section">
+          <h3>Education</h3>
+          <p>Bachelor of Software Engineering · Sindh Agriculture University · Expected DEC-2026</p>
+          <p>Higher Secondary 12 · SZABIST College · Completed 2022</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- start  -->
+
+  <div class="win" id="win-videos" style="left:300px; top:90px; width:800px; height:400px; display:none;">
+    <div class="win-titlebar" onmousedown="dragStart(event,'win-videos')">
+      <span class="win-icon">▶️</span>
+      <span class="win-title">My Videos</span>
+      <div class="win-controls">
+        <button class="wbtn" onclick="minimizeWin('videos')">─</button>
+        <button class="wbtn" onclick="maximizeWin('win-videos')">🗗</button>
+        <button class="wbtn close-btn" onclick="closeWin('videos')">✕</button>
+      </div>
+    </div>
+    <div class="win-body">
+      <div class="videos-layout">
+
+        <!-- LEFT SIDE (VIDEO LIST) -->
+        <div class="videos-list">
+
+          <div class="video-item" data-id="c9Dq2whxeJE">
+            <img src="https://img.youtube.com/vi/c9Dq2whxeJE/hqdefault.jpg">
+            <div class="video-info">
+              <p>Video 1 Title</p>
+              <span>Mr BlackLeg</span>
+            </div>
+          </div>
+
+          <div class="video-item" data-id="c9Dq2whxeJE">
+            <img src="https://img.youtube.com/vi/c9Dq2whxeJE/hqdefault.jpg">
+            <div class="video-info">
+              <p>Video 1 Title</p>
+              <span>Mr BlackLeg</span>
+            </div>
+          </div>
+
+          <div class="video-item" data-id="c9Dq2whxeJE">
+            <img src="https://img.youtube.com/vi/c9Dq2whxeJE/hqdefault.jpg">
+            <div class="video-info">
+              <p>Video 1 Title</p>
+              <span>Mr BlackLeg</span>
+            </div>
+          </div>
+          <div class="video-item" data-id="c9Dq2whxeJE">
+            <img src="https://img.youtube.com/vi/c9Dq2whxeJE/hqdefault.jpg">
+            <div class="video-info">
+              <p>Video 1 Title</p>
+              <span>Mr BlackLeg</span>
+            </div>
+          </div>
+          <div class="video-item" data-id="c9Dq2whxeJE">
+            <img src="https://img.youtube.com/vi/c9Dq2whxeJE/hqdefault.jpg">
+            <div class="video-info">
+              <p>Video 1 Title</p>
+              <span>Mr BlackLeg</span>
+            </div>
+          </div>
+          <div class="video-item" data-id="c9Dq2whxeJE">
+            <img src="https://img.youtube.com/vi/c9Dq2whxeJE/hqdefault.jpg">
+            <div class="video-info">
+              <p>Video 1 Title</p>
+              <span>Mr BlackLeg</span>
+            </div>
+          </div>
+          <div class="video-item" data-id="c9Dq2whxeJE">
+            <img src="https://img.youtube.com/vi/c9Dq2whxeJE/hqdefault.jpg">
+            <div class="video-info">
+              <p>Video 1 Title</p>
+              <span>Mr BlackLeg</span>
+            </div>
+          </div>
+          <div class="video-item" data-id="c9Dq2whxeJE">
+            <img src="https://img.youtube.com/vi/c9Dq2whxeJE/hqdefault.jpg">
+            <div class="video-info">
+              <p>Video 1 Title</p>
+              <span>Mr BlackLeg</span>
+            </div>
+          </div>
+
+          <div class="video-item" data-id="5wDH30AB_Aw">
+            <img src="https://img.youtube.com/vi/5wDH30AB_Aw/hqdefault.jpg">
+            <div class="video-info">
+              <p>Test Bullets on Dutch</p>
+              <span>Mr BlackLeg</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT SIDE (PLAYER) -->
+        <div class="video-player-area">
+          <iframe id="player-frame" allowfullscreen></iframe>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- end  -->
+
+
+  <!-- ============================================
+       PROJECTS WINDOW
+       ============================================ -->
+  <div class="win" id="win-projects" style="left:180px; top:80px; width:580px; height:440px; display:none;">
+    <div class="win-titlebar" onmousedown="dragStart(event,'win-projects')">
+      <span class="win-icon">📁</span>
+      <span class="win-title">My Projects</span>
+      <div class="win-controls">
+        <button class="wbtn" onclick="minimizeWin('projects')">─</button>
+        <button class="wbtn" onclick="maximizeWin('win-projects')">🗗</button>
+        <button class="wbtn close-btn" onclick="closeWin('projects')">✕</button>
+      </div>
+    </div>
+    <div class="win-body">
+      <div class="projects-list">
+
+        <!-- PROJECT 1 — CHANGE: update title, description, tags -->
+        <div class="project-card">
+          <h3>🌤️ Weather Web App</h3>
+          <p>A Flask web application that fetches real-time weather data from OpenWeatherMap API. Users enter a city
+            name and get current temperature, humidity, and conditions. Deployed live on AWS EC2.</p>
+          <div class="project-tags">
+            <span class="ptag">Python</span>
+            <span class="ptag">Flask</span>
+            <span class="ptag">REST API</span>
+            <span class="ptag">AWS EC2</span>
+            <span class="ptag">HTML/CSS</span>
+          </div>
+        </div>
+
+        <!-- PROJECT 2 — CHANGE: update title, description, tags -->
+        <div class="project-card">
+          <h3>🖥️ Windows Portfolio</h3>
+          <p>This portfolio website itself — built to look and function like a Windows desktop. Draggable windows,
+            taskbar, start menu, right-click menu, and working clock. Pure HTML, CSS, and JavaScript.</p>
+          <div class="project-tags">
+            <span class="ptag">HTML</span>
+            <span class="ptag">CSS</span>
+            <span class="ptag">JavaScript</span>
+            <span class="ptag">AWS S3</span>
+          </div>
+        </div>
+
+        <!-- PROJECT 3 — CHANGE: update title, description, tags -->
+        <div class="project-card">
+          <h3>🐍 Python Scripts Collection</h3>
+          <p>A collection of practical Python scripts: file organizer, basic calculator, to-do list with file I/O, and a
+            JSON data reader. All pushed to GitHub with documentation.</p>
+          <div class="project-tags">
+            <span class="ptag">Python</span>
+            <span class="ptag">File I/O</span>
+            <span class="ptag">JSON</span>
+            <span class="ptag">GitHub</span>
+          </div>
+        </div>
+
+        <!-- ADD MORE PROJECTS: copy a project-card block above and paste it here -->
+
+      </div>
+    </div>
+  </div>
+
+
+
+  </div>
+  <!-- ============================================
+       RESUME WINDOW
+       ============================================ -->
+  <div class="win" id="win-resume" style="left:200px; top:50px; width:540px; height:480px; display:none;">
+    <div class="win-titlebar" onmousedown="dragStart(event,'win-resume')">
+      <span class="win-icon">📄</span>
+      <span class="win-title">Resume.txt — Notepad</span>
+      <div class="win-controls">
+        <button class="wbtn" onclick="minimizeWin('resume')">─</button>
+        <button class="wbtn" onclick="maximizeWin('win-resume')">🗗</button>
+        <button class="wbtn close-btn" onclick="closeWin('resume')">✕</button>
+      </div>
+    </div>
+    <div class="win-body">
+      <div class="resume-content">
+
+
+        <div style="text-align:center; margin-bottom:24px;">
+          <div style="font-size:20px; font-weight:600; color:#202020;">Your Name</div>
+          <div style="font-size:12px; color:#555; margin-top:4px;">
+            yourname@email.com · GitHub: github.com/yourname · Karachi, Pakistan
+          </div>
+        </div>
+
+        <div class="resume-section">
+          <h3>Education</h3>
+          <div class="resume-item">
+            <!-- CHANGE: your degree, university, year -->
+            <div class="r-title">Bachelor of Computer Science</div>
+            <div class="r-sub">Your University · Expected Dec 2026</div>
+          </div>
+        </div>
+
+        <div class="resume-section">
+          <h3>Skills</h3>
+          <div class="resume-item">
+            <!-- CHANGE: update as you learn more -->
+            <div class="r-sub"><strong>Languages:</strong> Python, HTML, CSS, JavaScript (basic)</div>
+            <div class="r-sub"><strong>Frameworks:</strong> Flask</div>
+            <div class="r-sub"><strong>Cloud:</strong> AWS (S3, EC2, IAM)</div>
+            <div class="r-sub"><strong>Tools:</strong> Git, GitHub, Linux CLI, VS Code</div>
+          </div>
+        </div>
+
+        <div class="resume-section">
+          <h3>Projects</h3>
+          <div class="resume-item">
+            <!-- CHANGE: update project name and bullets -->
+            <div class="r-title">Weather Web App</div>
+            <ul>
+              <li>Built a Python Flask web app that displays real-time weather via REST API</li>
+              <li>Deployed live on AWS EC2 with proper security group configuration</li>
+            </ul>
+          </div>
+          <div class="resume-item">
+            <div class="r-title">Windows 10 Portfolio Website</div>
+            <ul>
+              <li>Created an interactive portfolio styled as a Windows 10 desktop environment</li>
+              <li>Hosted as a static site on AWS S3 with public access</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ============================================
+       CONTACT WINDOW
+       ============================================ -->
+  <div class="win" id="win-contact" style="left:220px; top:100px; width:420px; height:300px; display:none;">
+    <div class="win-titlebar" onmousedown="dragStart(event,'win-contact')">
+      <span class="win-icon">✉️</span>
+      <span class="win-title">Contact Me</span>
+      <div class="win-controls">
+        <button class="wbtn" onclick="minimizeWin('contact')">─</button>
+        <button class="wbtn" onclick="maximizeWin('win-contact')">🗗</button>
+        <button class="wbtn close-btn" onclick="closeWin('contact')">✕</button>
+      </div>
+    </div>
+    <div class="win-body" style="padding:28px;">
+      <div style="display:flex; flex-direction:column; gap:14px;">
+
+        <div style="font-size:13px; color:#555; margin-bottom:4px;">
+          Open to internship and junior developer opportunities.
+        </div>
+
+        <!-- CHANGE: replace with your actual email -->
+        <div style="display:flex; align-items:center; gap:12px;">
+          <span style="font-size:20px;">📧</span>
+          <div>
+            <div style="font-size:11px; color:#888; font-weight:600; text-transform:uppercase; letter-spacing:0.5px;">
+              Email</div>
+            <div style="font-size:13px; color:#0078d4;">yourname@email.com</div>
+          </div>
+        </div>
+
+        <!-- CHANGE: replace with your GitHub URL -->
+        <div style="display:flex; align-items:center; gap:12px;">
+          <span style="font-size:20px;">🐙</span>
+          <div>
+            <div style="font-size:11px; color:#888; font-weight:600; text-transform:uppercase; letter-spacing:0.5px;">
+              GitHub</div>
+            <div style="font-size:13px; color:#0078d4;">github.com/yourname</div>
+          </div>
+        </div>
+
+        <!-- CHANGE: replace with your LinkedIn URL -->
+        <div style="display:flex; align-items:center; gap:12px;">
+          <span style="font-size:20px;">💼</span>
+          <div>
+            <div style="font-size:11px; color:#888; font-weight:600; text-transform:uppercase; letter-spacing:0.5px;">
+              LinkedIn</div>
+            <div style="font-size:13px; color:#0078d4;">linkedin.com/in/yourname</div>
+          </div>
+        </div>
+
+        <div style="display:flex; align-items:center; gap:12px;">
+          <span style="font-size:20px;">📍</span>
+          <div>
+            <div style="font-size:11px; color:#888; font-weight:600; text-transform:uppercase; letter-spacing:0.5px;">
+              Location</div>
+            <div style="font-size:13px; color:#202020;">Karachi, Pakistan</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  </div>
+  <!-- recyvle win   -->
+
+  <!-- my picture  -->
+
+  <div class="win" id="win-picture" style="left:300px; top:90px; width:800px; height:400px; display:none;">
+    <div class="win-titlebar" onmousedown="dragStart(event,'win-picture')">
+      <span class="win-icon">🖼️</span>
+      <span class="win-title">My Picture</span>
+      <div class="win-controls">
+        <button class="wbtn" onclick="minimizeWin('picture')">─</button>
+        <button class="wbtn" onclick="maximizeWin('win-picture')">🗗</button>
+        <button class="wbtn close-btn" onclick="closeWin('picture')">✕</button>
+      </div>
+    </div>
+    <div class="win-body">
+      <p>hello</p>
+    </div>
+  </div>
+
+  <!-- end #desktop -->
+
+
+
+  <!-- ============================================
+     TASKBAR
+     ============================================ -->
+  <div id="taskbar">
+
+    <div id="start-btn" onclick="toggleStart()">
+      <!-- Windows logo (colored squares) -->
+      <svg viewBox="0 0 24 24">
+        <polygon points="2,4 11,3 11,11 2,11" fill="currentColor" />
+        <polygon points="13,3 22,2 22,11 13,11" fill="currentColor" />
+        <polygon points="2,13 11,13 11,21 2,20" fill="currentColor" />
+        <polygon points="13,13 22,13 22,22 13,21" fill="currentColor" />
+      </svg>
+    </div>
+
+    <div id="search-box">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="2">
+        <circle cx="11" cy="11" r="8" />
+        <line x1="21" y1="21" x2="16.65" y2="16.65" />
+      </svg>
+      <span>Search</span>
+    </div>
+
+    <!-- Open app buttons appear here automatically via JavaScript -->
+    <div class="taskbar-icons" id="taskbar-icons"></div>
+
+    <div class="taskbar-right">
+      <div class="tray-icon">🌐</div>
+      <div class="tray-icon">🔊</div>
+      <div class="tray-icon">🔋</div>
+      <div id="clock"></div>
+    </div>
+
+  </div>
+
+
+  <!-- ============================================
+     START MENU
+     ============================================ -->
+  <div id="start-menu">
+    <div class="start-search">
+      <input type="text" placeholder="Type here to search">
+    </div>
+    <div class="start-pinned-label">PINNED</div>
+    <div class="start-apps-grid">
+      <div class="start-app" onclick="openWin('about');   toggleStart()">
+        <div class="sa-icon">🧑</div><span>About Me</span>
+      </div>
+      <div class="start-app" onclick="openWin('projects');toggleStart()">
+        <div class="sa-icon">📁</div><span>Projects</span>
+      </div>
+      <div class="start-app" onclick="openWin('skills'); toggleStart()">
+        <div class="sa-icon">⚙️</div><span>Skills</span>
+      </div>
+      <div class="start-app" onclick="openWin('resume'); toggleStart()">
+        <div class="sa-icon">📄</div><span>Resume</span>
+      </div>
+      <div class="start-app" onclick="openWin('contact');toggleStart()">
+        <div class="sa-icon">✉️</div><span>Contact</span>
+      </div>
+      <div class="start-app" onclick="toggleStart()">
+        <div class="sa-icon">⚙️</div><span>Shut Down</span>
+      </div>
+    </div>
+    <!-- CHANGE: your initials and name -->
+    <div class="start-user">
+      <div class="start-avatar">AR</div>
+      <span>Abdul Rafay</span>
+      <span class="power-icon">⏻</span>
+    </div>
+  </div>
+
+
+  <!-- ============================================
+     RIGHT CLICK MENU
+     ============================================ -->
+  <div id="ctx-menu">
+    <div class="ctx-item" onclick="hideCtx()">🔄 Refresh</div>
+  </div>
+
+
+  <!-- ============================================
+     TOAST NOTIFICATION
+     ============================================ -->
+  <div id="notif">
+    <div class="n-app">System · just now</div>
+    <div class="n-title">Welcome! 👋</div>
+    <div>Double-click any desktop icon to open. Try right-clicking too!</div>
+  </div>
+
+
+  <!-- ============================================
+     JAVASCRIPT — window logic, drag, clock
+     ============================================ -->
+  <script>
+    const openWindows = {};
+    const taskbarBtns = {};
+    let zTop = 100;
+
+    // Clock
+    function updateClock() {
+      const now = new Date();
+      const time = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+      const date = now.toLocaleDateString('en-US', { month: '2-digit', day: '2-digit', year: 'numeric' });
+      document.getElementById('clock').innerHTML = `${time}<br>${date}`;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+
+    // Open / close / minimize / focus windows
+    function openWin(id) {
+      const el = document.getElementById('win-' + id);
+      if (!el) return;
+      el.style.display = 'flex';
+      el.classList.remove('minimized');
+      focusWin(id);
+      openWindows[id] = true;
+      addTaskbarBtn(id);
+      showNotif('Opened', id.charAt(0).toUpperCase() + id.slice(1));
+    }
+
+    function closeWin(id) {
+      const el = document.getElementById('win-' + id);
+      if (el) el.style.display = 'none';
+      delete openWindows[id];
+      removeTaskbarBtn(id);
+    }
+
+    function minimizeWin(id) {
+      const el = document.getElementById('win-' + id);
+      if (el) { el.style.display = 'none'; el.classList.add('minimized'); }
+      if (taskbarBtns[id]) taskbarBtns[id].classList.remove('active');
+    }
+
+    function focusWin(id) {
+      Object.keys(openWindows).forEach(k => {
+        const w = document.getElementById('win-' + k);
+        if (w) w.classList.remove('focused');
+        if (taskbarBtns[k]) taskbarBtns[k].classList.remove('active');
+      });
+      const el = document.getElementById('win-' + id);
+      if (el) { el.classList.add('focused'); el.style.zIndex = ++zTop; }
+      if (taskbarBtns[id]) taskbarBtns[id].classList.add('active');
+    }
+
+    function maximizeWin(winId) {
+      const el = document.getElementById(winId);
+      if (!el) return;
+      if (el.dataset.maxed === '1') {
+        el.style.cssText = el.dataset.prevStyle;
+        el.dataset.maxed = '0';
+      } else {
+        el.dataset.prevStyle = el.style.cssText;
+        el.style.left = '0';
+        el.style.top = '0';
+        el.style.width = '100vw';
+        el.style.height = 'calc(100vh - 48px)';
+        el.style.borderRadius = '0';
+        el.dataset.maxed = '1';
+      }
+    }
+
+    // Taskbar buttons
+    const winNames = { about: 'About Me', projects: 'My Projects', videos: 'My Videos', resume: 'Resume.txt', contact: 'Contact Me', picture: 'My Picture' };
+    const winIcons = { about: '🧑', projects: '📁', videos: '▶️', resume: '📄', contact: '✉️', picture: '🖼️' };
+
+    function addTaskbarBtn(id) {
+      if (taskbarBtns[id]) return;
+      const bar = document.getElementById('taskbar-icons');
+      const btn = document.createElement('div');
+      btn.className = 'taskbar-app-btn active';
+      btn.innerHTML = `<span class="t-icon">${winIcons[id] || '🖼️'}</span><span>${winNames[id] || id}</span>`;
+      btn.onclick = () => {
+        const el = document.getElementById('win-' + id);
+        if (!el) return;
+        if (el.style.display === 'none') { el.style.display = 'flex'; focusWin(id); }
+        else if (el.classList.contains('focused')) minimizeWin(id);
+        else focusWin(id);
+      };
+      bar.appendChild(btn);
+      taskbarBtns[id] = btn;
+    }
+
+    function removeTaskbarBtn(id) {
+      if (taskbarBtns[id]) { taskbarBtns[id].remove(); delete taskbarBtns[id]; }
+    }
+
+    // Drag windows
+    function dragStart(e, id) {
+      if (e.target.closest('.wbtn')) return;
+      const el = document.getElementById(id);
+      focusWin(id.replace('win-', ''));
+      const startX = e.clientX - el.offsetLeft;
+      const startY = e.clientY - el.offsetTop;
+      function move(e) {
+        el.style.left = Math.max(0, e.clientX - startX) + 'px';
+        el.style.top = Math.max(0, Math.min(e.clientY - startY, window.innerHeight - 80)) + 'px';
+      }
+      function up() {
+        document.removeEventListener('mousemove', move);
+        document.removeEventListener('mouseup', up);
+      }
+      document.addEventListener('mousemove', move);
+      document.addEventListener('mouseup', up);
+    }
+
+    // Start menu toggle
+    function toggleStart() {
+      document.getElementById('start-menu').classList.toggle('open');
+    }
+
+    // Close start menu and ctx menu on outside click
+    document.addEventListener('click', e => {
+      if (!e.target.closest('#start-menu') && !e.target.closest('#start-btn'))
+        document.getElementById('start-menu').classList.remove('open');
+      if (!e.target.closest('#ctx-menu')) hideCtx();
+      if (!e.target.closest('.desktop-icon'))
+        document.querySelectorAll('.desktop-icon').forEach(i => i.classList.remove('selected'));
+    });
+
+    // Right click menu
+    document.getElementById('desktop').addEventListener('contextmenu', e => {
+      if (e.target.closest('.win') || e.target.closest('#taskbar')) return;
+      e.preventDefault();
+      const m = document.getElementById('ctx-menu');
+      m.style.left = Math.min(e.clientX, window.innerWidth - 200) + 'px';
+      m.style.top = Math.min(e.clientY, window.innerHeight - 180) + 'px';
+      m.classList.add('open');
+    });
+
+    function hideCtx() { document.getElementById('ctx-menu').classList.remove('open'); }
+
+    // Icon single-click select
+    function selectIcon(el) {
+      document.querySelectorAll('.desktop-icon').forEach(i => i.classList.remove('selected'));
+      el.classList.add('selected');
+    }
+
+    // GitHub link — CHANGE: put your actual GitHub URL here
+    function openLink() { window.open('https://github.com/', '_blank'); }
+
+    // Toast notification
+    function showNotif(action, name) {
+      const n = document.getElementById('notif');
+      n.querySelector('.n-title').textContent = `${action}: ${name}`;
+      n.querySelector('.n-app').textContent = 'Portfolio · just now';
+      n.classList.add('show');
+      clearTimeout(n._t);
+      n._t = setTimeout(() => n.classList.remove('show'), 3000);
+    }
+
+    // Welcome notification on load
+    setTimeout(() => {
+      const n = document.getElementById('notif');
+      n.classList.add('show');
+      setTimeout(() => n.classList.remove('show'), 4000);
+    }, 800);
+
+    // Click any window to bring it to front
+
+    document.querySelectorAll('.win').forEach(w => {
+      w.addEventListener('mousedown', () => focusWin(w.id.replace('win-', '')));
+    });
+
+    // video sec and btn log  
+
+    document.querySelectorAll(".video-item").forEach(item => {
+      item.addEventListener("click", () => {
+        document.querySelectorAll(".video-item").forEach(i => i.classList.remove("active"));
+        item.classList.add("active");
+        const id = item.dataset.id;
+        document.getElementById("player-frame").src =
+          `https://www.youtube.com/embed/${id}?autoplay=1`;
+      });
+    });
+
+  </script>
+
+</body>
+
+</html>
