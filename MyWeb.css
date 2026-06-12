@@ -1,24 +1,12 @@
 /* ============================================
    MY PORTFOLIO WEB — style.css
-   ============================================
-
-   HOW TO CUSTOMIZE:
-   - Change wallpaper → find #desktop and update background-image URL
-   - Change accent color → update --accent in :root
-   - Change taskbar color → update --taskbar-bg in :root
-   - Change window background → update --window-bg in :root
    ============================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;600&display=swap');
 
 * { margin: 0; padding: 0; box-sizing: border-box; user-select: none; }
 
-/* ── COLORS & VARIABLES (edit these to change the whole theme) ── */
-/* html {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-} */
+
 :root {
   --taskbar-h: 48px;
   --accent: #0078d4;           /* blue highlight color */
