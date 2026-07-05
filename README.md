@@ -18,8 +18,8 @@ Windows desktop environment. Built with pure HTML, CSS and Javascript.
 
 ## Screenshots
 
-(Add a screenshot here after uploading — 
-drag an image into the GitHub editor when editing README)
+<img width="1920" height="1049" alt="image" src="https://github.com/user-attachments/assets/9e71ce6d-cbfc-479b-b070-4e6061a2c8b6" />
+
 
 ## Built with
 
@@ -36,4 +36,7 @@ Just open `MyWeb.html` `MyWeb.css` in any browser. No setup needed.
 
 Abdul Rafay — SE Student at Sindh Agriculture University  
 GitHub: https://github.com/RafayRao-ux
+<<<<<<< HEAD
 LinkedIn: [linkedin.com/in/rafay-rao-67743532b](https://www.linkedin.com/in/rafay-rao-67743532b)
+=======
+>>>>>>> 2368b65dfb6afc46148d9a49d2567f9c75c469b6
