@@ -34,6 +34,6 @@ Just open `MyWeb.html` `MyWeb.css` in any browser. No setup needed.
 
 ## Author
 
-Abdul Rafay — SE Student at Sindh Agriculture University 
-GitHub: https://github.com/RafayRao-ux 
+Abdul Rafay — SE Student at Sindh Agriculture University <br>
+GitHub: https://github.com/RafayRao-ux  
 LinkedIn: [linkedin.com/in/rafay-rao-67743532b](https://www.linkedin.com/in/rafay-rao-67743532b)
